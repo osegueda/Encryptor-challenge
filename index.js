@@ -84,15 +84,20 @@ buttonEncrypt.onclick = encryptFun
 
 //para Desencriptar
 
-const decryptFun = () => {
-    console.log("desencriptado ??",encryptText.value)
-    return encryptResultText.value = encryptText.value
+const decryptFun = (string) => {
+    return string.replace(/ai/g, 'a').replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ufat/g, 'u')
 }
-buttonDecrypt.onclick = decryptFun
+buttonDecrypt.onclick = () =>{
+    if(encryptResultText.value === '' && encryptText.value.length !== 0){
+        encryptText.value = decryptFun(encryptText.value)
+    }else{
+        encryptResultText.value = decryptFun(encryptResultText.value)
+    }
+}
 
 buttonCopy.onclick = () =>{
     navigator.clipboard.writeText(encryptResultText.value)
+    encryptResultText.value = ''
 }
-
 
 
