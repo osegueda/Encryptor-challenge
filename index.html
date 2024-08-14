@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/cotton/64/key--v3.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Encryptor</title>
+</head>
+<body>
+  <main>
+    <!-- Title -->
+     <div class="container__title">
+        <p>‎ </p></label><h1 class="title" id="title"></h1>
+     </div>
+
+    <div class="encryptor__container">
+      <!-- left section -->
+      <div class="input__encryptor">
+        <textarea name="toencrypt" id="toencrypt" class="textarea__input" placeholder="ingrese el texto"></textarea>
+        <label for="warning" class="warning__text">ℹ Solo letras minúsculas y sin acento</label>
+        <div class="buttons__encryptor">
+          <button class="button__encrypt" id="button__encrypt">Encriptar</buttton>
+          <button class="button__decrypt" id="button__decrypt">Desencriptar</buttton>
+        </div>
+      </div>
+      <!--  -->
+
+      <!-- right section -->
+      <div class="result__encryptor">
+        <textarea name="encrypt" id="encrypt" class="textarea__encryptor" ></textarea>
+        <img src="./images/search.jpg" alt="Ningun mensaje fue encontrado" id="image__nf" class="image__text__notfound">
+        <div id="error__message">
+          <h2 class="message__nf">Ningun mensaje fue encontrado</h2>
+          <p class="message__nf">Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+        <button class="button__copy" id="button__copy" disabled>Copiar</button>
+      </div>
+      <!--  -->
+    </div>
+  </main>
+  <footer>
+    Challenge by <a href="https://www.aluracursos.com/" target="_blank">Alura</a>. Coded by <a href="https://github.com/osegueda">Osegueda</a>. 
+    <a href="https://www.linkedin.com/in/moises-osegueda/" target="_blank" style="text-decoration: none;">
+      <img src="https://img.icons8.com/ios-glyphs/30/linkedin.png  " alt="linkedin" height="30">
+    </a>
+    <a href="https://github.com/osegueda" target="_blank" style="text-decoration: none;">
+      <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" height="30">
+    </a>
+  </footer>
+  <script src="dist/autotyping.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

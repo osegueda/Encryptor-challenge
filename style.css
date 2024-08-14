@@ -1,0 +1,195 @@
+/* ========================== fonts ======================= */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+/* ====================== global variables ================ */
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan-2: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-1: hsl(184, 14%, 56%);
+    --Light-grayish-cyan-2: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-1: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --red: rgb(255, 102, 102);
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Space Mono", "Courier New", monospace;
+    background-color: var(--Light-grayish-cyan-2);;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  
+    min-height: 100vh;
+    max-width: 1600px;
+    width: 100%;
+}
+.container__title{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 0.9375rem;
+}
+.container__title > p{
+    font-size: 1.875rem
+}
+.title {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.3125rem;
+    font-size: 1.875rem;
+    color: var(--Dark-grayish-cyan-2);
+  }
+
+    /* ---Main container--- */
+
+div.encryptor__container {
+    background-color: var(--White);
+    border-radius: 5% 5% 0 0;
+    padding: 1.5rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s linear;
+}
+    /* ---left container--- */
+.input__encryptor{
+    padding: 3% 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+    /* ---Right container--- */
+.result__encryptor{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Light-grayish-cyan-1);
+    font-weight: 700;
+
+    padding: 3% 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 10px;
+}
+    /* ---Textareas common styles--- */
+.textarea__input,.textarea__encryptor {
+    height: 18.75rem;
+    width: 18.75rem;
+    resize: none;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan-1);
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    padding: 1% 2%;
+    font-family: "Space Mono", "Courier New", monospace;
+
+    font-weight: 700;
+    font-size: 1.0625rem;
+}
+
+.textarea__encryptor{
+    display: none;
+}
+
+.image__text__notfound{
+    height: auto;
+    max-width:60%;
+    display: none;
+}
+
+.error__message{
+    display: none;
+}
+    /* ---buttons styles--- */
+
+.buttons__encryptor{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.buttons__encryptor > button{
+    border: none;
+    border-radius: 0.3125rem;
+    padding: 0.5rem;
+    font-family: "Space Mono", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.0625rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    color: var(--Light-grayish-cyan-1);
+    background-color: var(--Very-dark-cyan);
+    letter-spacing: 1.2px;
+}
+.buttons__encryptor > button:hover {
+    background-color: var(--Light-grayish-cyan-2);
+    color: var(--Very-dark-cyan);
+  }
+.button__copy{
+    margin-top: auto;
+    max-width: 100%;
+    width: 80%;
+    padding: 0.3125rem;
+    font-family: "Space Mono", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+  
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Dark-grayish-cyan-2);
+}
+button.button__copy:enabled {
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+  }
+  
+  button.button__copy:enabled:hover {
+    background-color: var(--Light-grayish-cyan-2);
+  }
+    /* ---buttons styles--- */
+.message__nf{
+    text-align: center;
+}
+    /* ---footer--- */
+footer {
+    display: none;
+  }
+
+@media screen and (min-width: 768px) {
+
+    body {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+    div.encryptor__container {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 850px;
+      width: 900px;
+      border-radius: 1.25rem;
+      padding: 2rem;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* ---footer--- */
+    footer {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+    }
+  
+}
