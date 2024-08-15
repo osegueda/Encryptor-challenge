@@ -159,9 +159,9 @@ button.button__copy:enabled {
     text-align: center;
 }
     /* ---footer--- */
-footer {
+/*footer {
     display: none;
-  }
+  }*/
 
 @media screen and (min-width: 768px) {
 
@@ -188,6 +188,7 @@ footer {
         position: absolute;
         bottom: 0;
         text-align: center;
+        padding: auto;
         height: 50px;
         width: 100%;
     }
